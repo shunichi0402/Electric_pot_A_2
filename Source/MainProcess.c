@@ -49,7 +49,9 @@ MODE_t Main_SettingModeProcess(void)
         /* SW2 が押された */
         case SW2_PUSHED :
             /* 選択中のモードを保温モードに変更 */
-
+            mode_setting.selected_mode= WARM_MODE;
+            /* LED1 に 'B' を表示 */
+            view_mode7segled('b');
             break;
 
         /* SW3 が押された */
@@ -215,65 +217,104 @@ MODE_t Main_WarmModeProcess(void)
         /* 加熱状態 */
         case HEATING :
             /* タイマスタート */
-
+            TimerStart();
             /* 現在温度の保存 */
+            keep_temp= temp_data;
             
             while(state==HEATING)
             {
-
-               /* 設定温度 +3 度以上 */
-                  
-                /* 10 分経過 */
-                  
-                /* キャンセルスイッチが押された */
-                  
-                /* 水位ゼロが検出された */
-
-
-
+                if(IsTEMPGoE(&temp_data, &mode_setting.warm_temp, 3) == TRUE)
+                {/* 設定温度 +3 度以上 */
+                    /* ヒータ OFF */
+                    remort_power_off();
+                    /* 保温状態へ */
+                    state= WARMING;
+                    /* 加熱状態から遷移したことを記録 */
+                    from_heating= TRUE;
+                }
+                
+                if(TimerChkMin(10)== TRUE)
+                {/* 10 分経過 */
+                    if(IsTEMPLoE(&temp_data, &keep_temp, 0) == TRUE)
+                    {/* 現在温度が保存温度以下 */
+                        /* タイマ停止 */
+                        TimerStop();
+                        /* ヒータ OFF */
+                        remort_power_off();
+                        /* キャンセル処理へ */
+                        state= CANCEL;
+                    }
+                    /* 現在温度の保存 */
+                    keep_temp= temp_data;
+                    /* タイマスタート */
+                    TimerStart();
+                }
+                
+                if(sw_stat== SW1_PUSHED)
+                {/* キャンセルスイッチが押された */
+                    /* ヒータ OFF */
+                    remort_power_off();
+                    /* キャンセル処理へ */
+                    state= CANCEL;
+                }
+                
+                if(is_liquid == 0)
+                {/* 水位ゼロが検出された */
+                    /* ヒータ OFF */
+                    remort_power_off();
+                    /* キャンセル処理へ */
+                    state= CANCEL;
+                }
             }
             break;
         
         /* 保温状態 */
         case WARMING :
+            /* タイマスタート */
+            TimerStart();
+            
             while(state==WARMING)
             {
-		if(from_heating== TRUE)
+                if(from_heating== TRUE)
                 {/* 加熱状態からの遷移 */
-
-                	/* 設定温度 -3 度以下 */
-                    
-                        /* 保温状態 1 分以上 */
-                        
-			/* ヒータ ON */
-  
+                    if((IsTEMPLoE(&temp_data, &mode_setting.warm_temp, -3) == TRUE)
+                         && (TimerChkMin(1)== TRUE))
+                    {/* 設定温度 -3 度以下、且つ保温状態 1 分以上 */
+                        /* ヒータ ON */
+                        remort_power_on();
                         /* タイマ停止 */
-
+                        TimerStop();
                         /* 加熱状態へ */
+                        state= HEATING;
+                        /* 加熱状態への再遷移なので、from_heatingをFALSEに */
+                        from_heating= FALSE;
+                    }
                 }
-		else
+                else
                 {/* 加熱状態以外からの遷移 */
-                	/* ヒータ ON */
-  
-                        /* 加熱状態へ */
-
+                    /* ヒータ ON */
+                    remort_power_on();
+                    /* 加熱状態へ */
+                    state= HEATING;
+                    /* 加熱状態への遷移なので、from_heatingをFALSEに */
+                    from_heating= FALSE;
                 }
                 
-
-                /* キャンセルスイッチが押された */
+                if(sw_stat== SW1_PUSHED)
+                {/* キャンセルスイッチが押された */
                     /* ヒータ OFF */
-
+                    remort_power_off();
                     /* キャンセル処理へ */
+                    state= CANCEL;
+                }
 
-                
-
-
-                /* 水位ゼロが検出された */
+                if(is_liquid == 0)
+                {/* 水位ゼロが検出された */
                     /* ヒータ OFF */
-
+                    remort_power_off();
                     /* キャンセル処理へ */
-
-                
+                    state= CANCEL;
+                }
             }
                break;
         

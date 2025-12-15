@@ -167,8 +167,14 @@ static void vTASK_LED( void *pvParameters )
             }
             break;
         
-        /* 湯沸しモード、保温モード */
+        /* 湯沸しモード */
         case BOIL_MODE:
+            /* 現在温度を表示 */
+               isViewDP= view_temp7segled(&temp_data);
+            break;
+        
+        /* 保温モード */
+        case WARM_MODE:
             /* 現在温度を表示 */
                isViewDP= view_temp7segled(&temp_data);
             break;
@@ -273,6 +279,10 @@ static void vTASK_MAIN( void *pvParameters )
         /* 湯沸しモード */
         case BOIL_MODE:
             mode= Main_BoilModeProcess();
+            break;
+        /* 保温モード */
+        case WARM_MODE:
+            mode= Main_WarmModeProcess();
             break;
         }
     }
