@@ -1,0 +1,3 @@
+Warning[2066] C:\Users\student\MPLABXProjects\Electric_pot_A\FreeRTOS\Source\tasks.c 585 : type qualifier mismatch in assignment
+Warning[2066] C:\Users\student\MPLABXProjects\Electric_pot_A\FreeRTOS\Source\tasks.c 1464 : type qualifier mismatch in assignment
+Warning[2064] C:\Users\student\MPLABXProjects\Electric_pot_A\FreeRTOS\Source\tasks.c 3590 : static function 'prvTaskIsTaskSuspended' not defined

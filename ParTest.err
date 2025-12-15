@@ -1,0 +1,25 @@
+Error[1105] D:\MPLABXProjects\Electric_pot_20141210.X\Source\ParTest\ParTest.c 92 : symbol 'TRISDbits' has not been defined
+Error[1151] D:\MPLABXProjects\Electric_pot_20141210.X\Source\ParTest\ParTest.c 92 : struct or union object designator expected
+Error[1101] D:\MPLABXProjects\Electric_pot_20141210.X\Source\ParTest\ParTest.c 92 : lvalue required
+Error[1105] D:\MPLABXProjects\Electric_pot_20141210.X\Source\ParTest\ParTest.c 93 : symbol 'TRISDbits' has not been defined
+Error[1151] D:\MPLABXProjects\Electric_pot_20141210.X\Source\ParTest\ParTest.c 93 : struct or union object designator expected
+Error[1101] D:\MPLABXProjects\Electric_pot_20141210.X\Source\ParTest\ParTest.c 93 : lvalue required
+Error[1105] D:\MPLABXProjects\Electric_pot_20141210.X\Source\ParTest\ParTest.c 94 : symbol 'TRISDbits' has not been defined
+Error[1151] D:\MPLABXProjects\Electric_pot_20141210.X\Source\ParTest\ParTest.c 94 : struct or union object designator expected
+Error[1101] D:\MPLABXProjects\Electric_pot_20141210.X\Source\ParTest\ParTest.c 94 : lvalue required
+Error[1105] D:\MPLABXProjects\Electric_pot_20141210.X\Source\ParTest\ParTest.c 95 : symbol 'TRISDbits' has not been defined
+Error[1151] D:\MPLABXProjects\Electric_pot_20141210.X\Source\ParTest\ParTest.c 95 : struct or union object designator expected
+Error[1101] D:\MPLABXProjects\Electric_pot_20141210.X\Source\ParTest\ParTest.c 95 : lvalue required
+Error[1105] D:\MPLABXProjects\Electric_pot_20141210.X\Source\ParTest\ParTest.c 98 : symbol 'PORTDbits' has not been defined
+Error[1151] D:\MPLABXProjects\Electric_pot_20141210.X\Source\ParTest\ParTest.c 98 : struct or union object designator expected
+Error[1101] D:\MPLABXProjects\Electric_pot_20141210.X\Source\ParTest\ParTest.c 98 : lvalue required
+Error[1105] D:\MPLABXProjects\Electric_pot_20141210.X\Source\ParTest\ParTest.c 99 : symbol 'PORTDbits' has not been defined
+Error[1151] D:\MPLABXProjects\Electric_pot_20141210.X\Source\ParTest\ParTest.c 99 : struct or union object designator expected
+Error[1101] D:\MPLABXProjects\Electric_pot_20141210.X\Source\ParTest\ParTest.c 99 : lvalue required
+Error[1105] D:\MPLABXProjects\Electric_pot_20141210.X\Source\ParTest\ParTest.c 100 : symbol 'PORTDbits' has not been defined
+Error[1151] D:\MPLABXProjects\Electric_pot_20141210.X\Source\ParTest\ParTest.c 100 : struct or union object designator expected
+Error[1101] D:\MPLABXProjects\Electric_pot_20141210.X\Source\ParTest\ParTest.c 100 : lvalue required
+Error[1105] D:\MPLABXProjects\Electric_pot_20141210.X\Source\ParTest\ParTest.c 101 : symbol 'PORTDbits' has not been defined
+Error[1151] D:\MPLABXProjects\Electric_pot_20141210.X\Source\ParTest\ParTest.c 101 : struct or union object designator expected
+Error[1101] D:\MPLABXProjects\Electric_pot_20141210.X\Source\ParTest\ParTest.c 101 : lvalue required
+Error[1105] D:\MPLABXProjects\Electric_pot_20141210.X\Source\ParTest\ParTest.c 105 : symbol 'TRISEbits' has not been defined

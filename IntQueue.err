@@ -1,0 +1,2 @@
+Error[1027] D:\MPLABXProjects\Electric_pot_20141210.X\FreeRTOS\Demo\Common\Minimal\IntQueue.c 91 : unable to locate 'IntQueueTimer.h'
+Error[1099] D:\MPLABXProjects\Electric_pot_20141210.X\FreeRTOS\Demo\Common\Minimal\IntQueue.c 95 : 0  must be set to 1 in FreeRTOSConfig.h to use this demo file.

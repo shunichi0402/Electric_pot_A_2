@@ -1,0 +1,4 @@
+Warning[2054] D:\MPLABXProjects\Electric_pot_20141210.X\FreeRTOS\Demo\Common\Minimal\crhook.c 158 : suspicious pointer conversion
+Warning[2054] D:\MPLABXProjects\Electric_pot_20141210.X\FreeRTOS\Demo\Common\Minimal\crhook.c 209 : suspicious pointer conversion
+Warning[2054] D:\MPLABXProjects\Electric_pot_20141210.X\FreeRTOS\Demo\Common\Minimal\crhook.c 243 : suspicious pointer conversion
+Warning[2054] D:\MPLABXProjects\Electric_pot_20141210.X\FreeRTOS\Demo\Common\Minimal\crhook.c 243 : suspicious pointer conversion

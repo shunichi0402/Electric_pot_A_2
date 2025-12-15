@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="62">
+  <logicalFolder name="root" displayName="root" projectFiles="true">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <logicalFolder name="f1" displayName="FreeRTOS" projectFiles="true">
+        <logicalFolder name="include" displayName="include" projectFiles="true">
+          <itemPath>FreeRTOS/Source/include/croutine.h</itemPath>
+          <itemPath>FreeRTOS/Source/include/event_groups.h</itemPath>
+          <itemPath>FreeRTOS/Source/include/FreeRTOS.h</itemPath>
+          <itemPath>FreeRTOS/Source/include/list.h</itemPath>
+          <itemPath>FreeRTOS/Source/include/mpu_wrappers.h</itemPath>
+          <itemPath>FreeRTOS/Source/include/portable.h</itemPath>
+          <itemPath>FreeRTOS/Source/include/projdefs.h</itemPath>
+          <itemPath>FreeRTOS/Source/include/queue.h</itemPath>
+          <itemPath>FreeRTOS/Source/include/semphr.h</itemPath>
+          <itemPath>FreeRTOS/Source/include/StackMacros.h</itemPath>
+          <itemPath>FreeRTOS/Source/include/task.h</itemPath>
+          <itemPath>FreeRTOS/Source/include/timers.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="PIC18F" displayName="PIC18F" projectFiles="true">
+          <itemPath>FreeRTOS/Source/portable/MPLAB/PIC18F/portmacro.h</itemPath>
+          <itemPath>FreeRTOS/Source/portable/MPLAB/PIC18F/stdio.h</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="f3" displayName="PIC18F45J50" projectFiles="true">
+        <itemPath>Source/FreeRTOSConfig.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f2" displayName="Source" projectFiles="true">
+        <itemPath>Source/temp.h</itemPath>
+        <itemPath>Source/timer.h</itemPath>
+        <itemPath>Source/user.h</itemPath>
+        <itemPath>Source/Remotepower.h</itemPath>
+        <itemPath>Source/led.h</itemPath>
+        <itemPath>Source/input.h</itemPath>
+        <itemPath>Source/I2cProcess.h</itemPath>
+        <itemPath>Source/MainProcess.h</itemPath>
+        <itemPath>Source/ds2482.h</itemPath>
+        <itemPath>Source/commdef.h</itemPath>
+      </logicalFolder>
+    </logicalFolder>
+    <logicalFolder name="LinkerScript"
+                   displayName="Linker Files"
+                   projectFiles="true">
+      <itemPath>Source/18f45j50_g.lkr</itemPath>
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <logicalFolder name="f1" displayName="FreeRTOS" projectFiles="true">
+        <logicalFolder name="f1" displayName="Source" projectFiles="true">
+          <logicalFolder name="f1" displayName="portable" projectFiles="true">
+            <logicalFolder name="MemMang" displayName="MemMang" projectFiles="true">
+              <itemPath>FreeRTOS/Source/portable/MemMang/heap_1.c</itemPath>
+              <itemPath>FreeRTOS/Source/portable/MemMang/heap_2.c</itemPath>
+              <itemPath>FreeRTOS/Source/portable/MemMang/heap_3.c</itemPath>
+              <itemPath>FreeRTOS/Source/portable/MemMang/heap_4.c</itemPath>
+              <itemPath>FreeRTOS/Source/portable/MemMang/heap_5.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="f1" displayName="MPLAB" projectFiles="true">
+              <logicalFolder name="f1" displayName="PIC18F" projectFiles="true">
+                <itemPath>FreeRTOS/Source/portable/MPLAB/PIC18F/port.c</itemPath>
+              </logicalFolder>
+            </logicalFolder>
+          </logicalFolder>
+          <itemPath>FreeRTOS/Source/croutine.c</itemPath>
+          <itemPath>FreeRTOS/Source/event_groups.c</itemPath>
+          <itemPath>FreeRTOS/Source/list.c</itemPath>
+          <itemPath>FreeRTOS/Source/queue.c</itemPath>
+          <itemPath>FreeRTOS/Source/readme.txt</itemPath>
+          <itemPath>FreeRTOS/Source/tasks.c</itemPath>
+          <itemPath>FreeRTOS/Source/timers.c</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="f3" displayName="Source" projectFiles="true">
+        <itemPath>Source/main.c</itemPath>
+        <itemPath>Source/I2cProcess.c</itemPath>
+        <itemPath>Source/user.c</itemPath>
+        <itemPath>Source/Remotepower.c</itemPath>
+        <itemPath>Source/timer.c</itemPath>
+        <itemPath>Source/MainProcess.c</itemPath>
+        <itemPath>Source/led.c</itemPath>
+        <itemPath>Source/temp.c</itemPath>
+        <itemPath>Source/input.c</itemPath>
+        <itemPath>Source/ds2482.c</itemPath>
+      </logicalFolder>
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceRootList>
+    <Elem>FreeRTOS/Source</Elem>
+    <Elem>FreeRTOS/Demo/PIC18_MPLAB</Elem>
+    <Elem>FreeRTOS/Demo/Common/include</Elem>
+    <Elem>Source</Elem>
+    <Elem>FreeRTOS/Demo/Common/Minimal</Elem>
+    <Elem>lib</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="default" type="2">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <targetDevice>PIC18F45J50</targetDevice>
+        <targetHeader></targetHeader>
+        <targetPluginBoard></targetPluginBoard>
+        <platformTool>PICkit3PlatformTool</platformTool>
+        <languageToolchain>C18</languageToolchain>
+        <languageToolchainVersion>3.47</languageToolchainVersion>
+        <platform>3</platform>
+      </toolsSet>
+      <compileType>
+        <linkerTool>
+          <linkerLibItems>
+          </linkerLibItems>
+        </linkerTool>
+        <archiverTool>
+        </archiverTool>
+        <loading>
+          <useAlternateLoadableFile>false</useAlternateLoadableFile>
+          <parseOnProdLoad>false</parseOnProdLoad>
+          <alternateLoadableFile></alternateLoadableFile>
+        </loading>
+      </compileType>
+      <makeCustomizationType>
+        <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
+        <makeCustomizationPreStep></makeCustomizationPreStep>
+        <makeCustomizationPostStepEnabled>false</makeCustomizationPostStepEnabled>
+        <makeCustomizationPostStep></makeCustomizationPostStep>
+        <makeCustomizationPutChecksumInUserID>false</makeCustomizationPutChecksumInUserID>
+        <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
+        <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
+      </makeCustomizationType>
+      <C18>
+        <property key="code-model" value="ms"/>
+        <property key="data-model" value="oa-"/>
+        <property key="default-char-unsigned" value="false"/>
+        <property key="enable-all-optimizations" value="false"/>
+        <property key="enable-int-promotion" value="false"/>
+        <property key="enable-multi-bank-stack-model" value="true"/>
+        <property key="enable-ob" value="false"/>
+        <property key="enable-od" value="true"/>
+        <property key="enable-om" value="true"/>
+        <property key="enable-on" value="true"/>
+        <property key="enable-op" value="false"/>
+        <property key="enable-opa" value="false"/>
+        <property key="enable-or" value="false"/>
+        <property key="enable-os" value="true"/>
+        <property key="enable-ot" value="false"/>
+        <property key="enable-ou" value="false"/>
+        <property key="enable-ow" value="true"/>
+        <property key="extra-include-directories"
+                  value="FreeRTOS\Source;FreeRTOS\Source\include;FreeRTOS\Source\portable;FreeRTOS\Demo\Common\include;FreeRTOS\Demo\PIC18_MPLAB;FreeRTOS\Source\portable\MPLAB\PIC18F;Source;FreeRTOS\Source\include;Source\Microchip;Source\Microchip\Include;Source\Microchip\USB;Source\Microchip\USB\CDCDeviceDriver;Source\Microchip\Include\USB"/>
+        <property key="optimization-master" value="Disable all"/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="procedural-abstraction-passes" value="4"/>
+        <property key="storage-class" value="sca"/>
+        <property key="verbose" value="false"/>
+        <property key="warning-level" value="2"/>
+      </C18>
+      <C18-AS>
+        <property key="cross.reference.file" value=""/>
+        <property key="default.radix" value="HEX"/>
+        <property key="enable.case.sensitivity" value="true"/>
+        <property key="hex.output.format" value="INHX32"/>
+        <property key="preprocessor.macros" value=""/>
+        <property key="warning.level" value="0"/>
+      </C18-AS>
+      <C18-LD>
+        <property key="cod-file" value="false"/>
+        <property key="extra-lib-directories" value=""/>
+        <property key="hex-output-format" value="INHX32"/>
+        <property key="map-file" value="${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map"/>
+      </C18-LD>
+      <C18LanguageToolchain>
+        <property key="extended-mode" value="false"/>
+        <property key="extended-mode-mcc18" value="false"/>
+        <property key="extended-mode-mpasm" value="false"/>
+        <property key="extended-mode-mplink" value="false"/>
+        <property key="stack-analysis" value="false"/>
+        <property key="stack-analysis-mcc18" value="false"/>
+        <property key="stack-analysis-mplink" value="false"/>
+      </C18LanguageToolchain>
+      <item path="FreeRTOS/Source/croutine.c" ex="true" overriding="false">
+        <C18>
+        </C18>
+        <C18-AS>
+        </C18-AS>
+        <C18-LD>
+        </C18-LD>
+        <C18LanguageToolchain>
+        </C18LanguageToolchain>
+      </item>
+      <item path="FreeRTOS/Source/event_groups.c" ex="true" overriding="false">
+        <C18>
+        </C18>
+        <C18-AS>
+        </C18-AS>
+        <C18-LD>
+        </C18-LD>
+        <C18LanguageToolchain>
+        </C18LanguageToolchain>
+      </item>
+      <item path="FreeRTOS/Source/portable/MemMang/heap_2.c"
+            ex="true"
+            overriding="false">
+        <C18>
+        </C18>
+        <C18-AS>
+        </C18-AS>
+        <C18-LD>
+        </C18-LD>
+        <C18LanguageToolchain>
+        </C18LanguageToolchain>
+      </item>
+      <item path="FreeRTOS/Source/portable/MemMang/heap_3.c"
+            ex="true"
+            overriding="false">
+        <C18>
+        </C18>
+        <C18-AS>
+        </C18-AS>
+        <C18-LD>
+        </C18-LD>
+        <C18LanguageToolchain>
+        </C18LanguageToolchain>
+      </item>
+      <item path="FreeRTOS/Source/portable/MemMang/heap_4.c"
+            ex="true"
+            overriding="false">
+        <C18>
+        </C18>
+        <C18-AS>
+        </C18-AS>
+        <C18-LD>
+        </C18-LD>
+        <C18LanguageToolchain>
+        </C18LanguageToolchain>
+      </item>
+      <item path="FreeRTOS/Source/portable/MemMang/heap_5.c"
+            ex="true"
+            overriding="false">
+        <C18>
+        </C18>
+        <C18-AS>
+        </C18-AS>
+        <C18-LD>
+        </C18-LD>
+        <C18LanguageToolchain>
+        </C18LanguageToolchain>
+      </item>
+      <item path="FreeRTOS/Source/queue.c" ex="true" overriding="false">
+        <C18>
+        </C18>
+        <C18-AS>
+        </C18-AS>
+        <C18-LD>
+        </C18-LD>
+        <C18LanguageToolchain>
+        </C18LanguageToolchain>
+      </item>
+      <item path="FreeRTOS/Source/timers.c" ex="true" overriding="false">
+        <C18>
+        </C18>
+        <C18-AS>
+        </C18-AS>
+        <C18-LD>
+        </C18-LD>
+        <C18LanguageToolchain>
+        </C18LanguageToolchain>
+      </item>
+      <PICkit3PlatformTool>
+      </PICkit3PlatformTool>
+    </conf>
+  </confs>
+</configurationDescriptor>
